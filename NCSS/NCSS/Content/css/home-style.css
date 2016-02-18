@@ -1,0 +1,86 @@
+﻿body {
+        font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+/*Admin Page CSS Adding*/
+.time{
+    font-size: 10px;
+    color: #868686;
+}
+#menu-top li{
+    border-bottom:1px solid #fff;
+    text-transform: uppercase !important;
+    font-size: 11px;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+    background-color:transparent;
+}
+#menu-top li.active{
+    background-color: #001849 !important;
+}
+#menu-top li>ul>li{
+    background: #353535;
+
+
+}
+
+.navbar-inverse .navbar-toggle {
+    background: rgb(15,63,153);
+    border: 0px;
+}
+.header-nav{
+    margin-left: 90px;
+    color: rgb(15,63,135);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.admin-logo{
+    height: 40px;
+    position: absolute;
+    top: 5px;
+}
+b.caret{
+     color: red;
+    font-size: 11px;
+}
+#page-wrapper {
+    min-height: 900px;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #cke_ad-detail-area{
+    margin-left: 0px;
+}
+}
+@media only screen
+and (min-width : 321px) {
+    
+}
+@media only screen
+and (max-width : 320px) {
+}
+
+@media (max-width: 768px)
+{
+    .navbar-nav{
+        background: rgb(0,51,153) !important;
+    }
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border: 0px;
+    }
+    .top-nav>li>a {
+  
+    line-height: 20px;
+    color: rgb(0,51,153);
+    }
+    .top-nav>li>a:hover,
+    .top-nav>li>a:focus,
+    .top-nav>.open>a,
+    .top-nav>.open>a:hover,
+    .top-nav>.open>a:focus {
+        background-color: #002D86;
+        color: #fff;
+    }
+}

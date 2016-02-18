@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title</title>
+    <link href="~/Scripts/Libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/sb-admin.css" rel="stylesheet" />
+    <link href="~/Content/css/morris.css" rel="stylesheet" />
+    <link href="~/Content/css/home-style.css" rel="stylesheet" />
+    <link href="~/Scripts/Libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Libs/jquery/jquery-1.11.2.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+            <div class="header">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><!--<span class="admin-logo">MEAN Stack</span>-->
+                        <img class="admin-logo" src="~/Content/images/home/NCSS.jpg" />
+                        <abbr href="#" class="header-nav">SunRay Web Portal</abbr>
+                    </a>
+                </div>
+                <!-- Top Menu Items -->
+                <ul class="nav navbar-right top-nav">
+
+                    <!--<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><b class="caret">12</b></a>
+                            <ul class="dropdown-menu message-dropdown">
+                                <li class="message-preview">
+                                    <a href="#">
+                                        <div class="media">
+                                            <span class="pull-left">
+                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                            </span>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><strong>Einzbern</strong>
+                                                </h5>
+                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>12:02</p>
+                                                <p>Mail coming from...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="message-footer">
+                                    <a href="/Mail">Đọc Email</a>
+                                </li>
+                            </ul>
+                        </li>
+                     <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart fa-1.5x"></i><b class="caret">3</b></a>
+                            <ul class="dropdown-menu alert-dropdown">
+                                <li>
+                                    <a href="#" class="nofi-list">Mã Hóa Đơn: <span>00992</span> của <span>Einzbern</span> vào ngày 10/10/2011<span class=\"label label-warning\">Chưa Duyệt</span>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="/Order">Xem tất cả...</a>
+                                </li>
+                            </ul>
+                        </li>-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Zhang Lin <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-gear"></i>Profile</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-power-off"></i>Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" id="menu-top">
+                    <li class="active">
+                        <a ui-sref="home"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                    </li>
+                    <li>
+                        <a ui-sref="payslip"><i class="fa fa-fw fa-credit-card"></i> Payslip</a>
+                    </li>
+                    <li>
+                        <a ui-sref="leave"><i class="fa fa-fw fa-paper-plane-o"></i> Leave Applications</a>
+                    </li>
+                    <li>
+                        <a ui-sref="benefits"><i class="fa fa-fw fa-heart"></i> Benefits Claims</a>
+                    </li>
+                    <!-- <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-rocket"></i> Sản Phẩm <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#">Quần Áo</a>
+                            </li>
+                            <li>
+                                <a href="#">Thương Hiệu</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li>
+                        <a ui-sref="staff"><i class="fa fa-fw fa-user"></i> Staff Information</a>
+                    </li>
+                    <li>
+                        <a ui-sref="announcements"><i class="fa fa-fw fa-bullhorn"></i> Announcements</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        @RenderBody()
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+</body>
+</html>
+
+<script src="~/Scripts/Libs/bootstrap/js/bootstrap.min.js"></script>
