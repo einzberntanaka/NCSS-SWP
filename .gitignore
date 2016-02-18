@@ -1,5 +1,2 @@
-NCSS/NCSS/bin
-NCSS/NCSS/obj
-*.DS_Store
-npm-debug.log
-thumb.db
+/NCSS/NCSS/bin
+/NCSS/NCSS/obj
