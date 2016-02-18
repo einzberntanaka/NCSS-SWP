@@ -125,6 +125,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\favicon.ico" />
+    <Content Include="Scripts\App\controllers\LoginController.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -170,7 +172,9 @@
     <Content Include="Content\images\Slide04.jpg" />
     <Content Include="Content\images\update.png" />
     <Content Include="Global.asax" />
+    <Content Include="Models\test.txt" />
     <Content Include="Scripts\App\App.js" />
+    <Content Include="Scripts\App\services\Services.js" />
     <Content Include="Scripts\Libs\angular-ui-router\angular-ui-router.js" />
     <Content Include="Scripts\Libs\angular-ui-router\angular-ui-router.min.js" />
     <Content Include="Scripts\Libs\angular\angular.js" />
@@ -223,9 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Scripts\App\controllers\" />
-    <Folder Include="Scripts\App\services\" />
     <Folder Include="Scripts\Libs\extend\" />
   </ItemGroup>
   <ItemGroup>

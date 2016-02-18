@@ -16,6 +16,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCSS.EntityModel", "NCSS.EntityModel\NCSS.EntityModel.csproj", "{ED6F555E-311C-4A9D-A966-D30B17AC22CC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{42583733-4552-430A-8B47-870E783E3666}"
+	ProjectSection(SolutionItems) = preProject
+		Source.txt = Source.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
