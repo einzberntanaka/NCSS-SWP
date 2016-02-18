@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Security;
+using NCSS.EntityModel.Entities;
 
 namespace NCSS
 {
@@ -19,6 +21,34 @@ namespace NCSS
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+        protected void Application_PostAuthenticateRequest(Object sender, EventArgs e)
+        {
+            if (FormsAuthentication.CookiesSupported == true)
+            {
+                if (Request.Cookies[FormsAuthentication.FormsCookieName] != null)
+                {
+                    try
+                    {
+                        string username = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value).Name;
+                        string roles = string.Empty;
+                        //
+                        using (NCSSEntities entities = new NCSSEntities())
+                        {
+                            if (entities.USERs.Any(user => user.Username == username))
+                            {
+                                USER user = entities.USERs.SingleOrDefault(u => u.Username == username);
+                                roles = user.ROLE.RoleName;
+                            }
+                        }
+                        HttpContext.Current.User = new System.Security.Principal.GenericPrincipal(
+                        new System.Security.Principal.GenericIdentity(username, "Forms"), roles.Split(';'));
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+            }
         }
     }
 }

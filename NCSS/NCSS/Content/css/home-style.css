@@ -6,7 +6,7 @@
     font-size: 10px;
     color: #868686;
 }
-#menu-top li{
+#menu-top>li{
     border-bottom:1px solid #fff;
     text-transform: uppercase !important;
     font-size: 11px;
@@ -18,13 +18,12 @@
     background-color: #001849 !important;
 }
 #menu-top li>ul>li{
-    background: #353535;
 
-
+    background: #0040CC;
 }
 
 .navbar-inverse .navbar-toggle {
-    background: rgb(15,63,153);
+    background: rgb(0,64,153);
     border: 0px;
 }
 .header-nav{
@@ -82,5 +81,10 @@ and (max-width : 320px) {
     .top-nav>.open>a:focus {
         background-color: #002D86;
         color: #fff;
+    }
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #001849 !important;
     }
 }

@@ -39,8 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\UsersManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NCSS.Contracts\NCSS.Contracts.csproj">
+      <Project>{0384e947-c634-4239-98a6-4011369a43df}</Project>
+      <Name>NCSS.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCSS.DataAccess\NCSS.DataAccess.csproj">
+      <Project>{c5bd5bf0-ae4d-41ec-9283-fbe62ff576cf}</Project>
+      <Name>NCSS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NCSS.EntityModel\NCSS.EntityModel.csproj">
+      <Project>{ed6f555e-311c-4a9d-a966-d30b17ac22cc}</Project>
+      <Name>NCSS.EntityModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

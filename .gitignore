@@ -1,2 +1,12 @@
 /NCSS/NCSS/bin
 /NCSS/NCSS/obj
+/NCSS/NCSS.BusinessComponents/bin
+/NCSS/NCSS.BusinessComponents/obj
+/NCSS/NCSS.Contracts/bin
+/NCSS/NCSS.Contracts/obj
+/NCSS/NCSS.DataAccess/bin
+/NCSS/NCSS.DataAccess/obj
+/NCSS/NCSS.EntityModel/bin
+/NCSS/NCSS.EntityModel/obj
+/NCSS/NCSS.Model/bin
+/NCSS/NCSS.Model/obj

@@ -144,21 +144,22 @@
             <!-- fix for uat 254 -->
             <div class="pure-u-1 pure-u-md-1-2 homepage__login homepage_height_custom">
 
-                <form id="login" name="LoginForm" class="pure-form pure-form-stacked sp-form tovalidate" action="/spauth/login/loginpage?URL=%2F&amp;TAM_OP=login" method="post" autocomplete="off">
+                <form id="login" name="LoginForm" class="pure-form pure-form-stacked sp-form tovalidate" action="" method="post" autocomplete="off">
 
 
                     <input id="pageBean.pageNumber" name="pageBean.pageNumber" value="page1" type="hidden">
 
                     <h1 id="loginh1">Login</h1>
-
-
-
                     <div class="form-notification alert" style="border-style:none;">
                         <div id="bothMandatoryDiv" style="display:none">Please enter your SingPass ID and Password.</div>
                         <div id="userIdMandatoryDiv" style="display:none">Please enter your SingPass ID.</div>
                         <div id="passwordMandatoryDiv" style="display:none">Please enter your SingPass Password.</div>
                         <div id="invalidLoginDiv" style="display:none">null</div>
                         <div id="loginFirstDiv" style="display:none">Please log onto SingPass to proceed.</div>
+                        @if (ViewBag.messageError != null && ViewBag.messageError != "")
+                        {
+                            <div id="invalidLoginDiv" style="display: block;">@ViewBag.messageError</div>
+                        }
                     </div>
 
                     <fieldset>
@@ -188,7 +189,7 @@
                     </fieldset>
 
                     <div class="pure-controls float-none-ie7">
-                        <button type="button" class="pure-button pure-button-primary btn" onclick="doSubmit()">Login</button>
+                        <input type="submit" class="pure-button pure-button-primary btn" value="Login">Login</input>
                         <span class="forgot">
                             Forgot <a href="https://www.singpass.gov.sg/singpass/retrieveaccount/termsandconditions">SingPass ID</a> or
                             <a href="https://www.singpass.gov.sg/singpass/requestOnlineReset/requestOnlineResetTermsCheck">Password</a>?
@@ -305,7 +306,7 @@
 
         </div>
 
-        <form name="SubmitForm" action="/spauth/login/authLogin" method="POST">
+        <form name="SubmitForm" action="" method="POST">
             <input name="EncryptedRSABlock" value="" type="hidden">
             <input name="EncryptedRSABlock1" value="" type="hidden">
             <input name="EncryptedRSABlock2" value="" type="hidden">

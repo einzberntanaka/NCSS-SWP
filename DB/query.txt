@@ -1,0 +1,50 @@
+/*
+Created		2/19/2016
+Modified		2/19/2016
+Project		
+Model			
+Company		
+Author		
+Version		
+Database		MS SQL 2005 
+*/
+
+
+Create table [USER]
+(
+	[Id] Integer Identity(1,1) NOT NULL,
+	[Username] Nvarchar(16) NOT NULL,
+	[Password] Nvarchar(32) NOT NULL,
+	[Name] Nvarchar(32) NULL,
+	[RoleID] Integer NOT NULL,
+Primary Key ([Id])
+) 
+go
+
+Create table [ROLE]
+(
+	[RoleID] Integer Identity(1,1) NOT NULL,
+	[RoleName] Nvarchar(16) NOT NULL,
+Primary Key ([RoleID])
+) 
+go
+
+
+Alter table [USER] add  foreign key([RoleID]) references [ROLE] ([RoleID])  on update no action on delete no action 
+go
+
+
+Set quoted_identifier on
+go
+
+
+Set quoted_identifier off
+go
+
+
+/* Roles permissions */
+
+
+/* Users permissions */
+
+

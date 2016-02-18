@@ -13,7 +13,11 @@ namespace NCSS.Controllers
 
         public ActionResult Index()
         {
-            return View();
+
+            if (Request.Cookies["user"] != null)
+                return View();
+            else
+                return RedirectToAction("Index","Users");
         }
 
     }

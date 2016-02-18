@@ -42,52 +42,15 @@
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
-
-                    <!--<li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><b class="caret">12</b></a>
-                            <ul class="dropdown-menu message-dropdown">
-                                <li class="message-preview">
-                                    <a href="#">
-                                        <div class="media">
-                                            <span class="pull-left">
-                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                            </span>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><strong>Einzbern</strong>
-                                                </h5>
-                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>12:02</p>
-                                                <p>Mail coming from...</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="message-footer">
-                                    <a href="/Mail">Đọc Email</a>
-                                </li>
-                            </ul>
-                        </li>
-                     <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart fa-1.5x"></i><b class="caret">3</b></a>
-                            <ul class="dropdown-menu alert-dropdown">
-                                <li>
-                                    <a href="#" class="nofi-list">Mã Hóa Đơn: <span>00992</span> của <span>Einzbern</span> vào ngày 10/10/2011<span class=\"label label-warning\">Chưa Duyệt</span>
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="/Order">Xem tất cả...</a>
-                                </li>
-                            </ul>
-                        </li>-->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Zhang Lin <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> @Request.Cookies["user"].Value<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="#"><i class="fa fa-fw fa-gear"></i>Profile</a>
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-power-off"></i>Logout</a>
+                                <a href="/Users/Logout"><i class="fa fa-fw fa-power-off"></i>Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -104,27 +67,35 @@
                         <a ui-sref="payslip"><i class="fa fa-fw fa-credit-card"></i> Payslip</a>
                     </li>
                     <li>
-                        <a ui-sref="leave"><i class="fa fa-fw fa-paper-plane-o"></i> Leave Applications</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#leaveApp"><i class="fa fa-fw fa-paper-plane-o"></i> Leave Applications</a>
+                        <ul id="leaveApp" class="collapse">
+                            <li>
+                                <a href="#">Submit Leave Application</a>
+                            </li>
+                            <li>
+                                <a href="#">Leave Application List</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a ui-sref="benefits"><i class="fa fa-fw fa-heart"></i> Benefits Claims</a>
                     </li>
-                    <!-- <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-rocket"></i> Sản Phẩm <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Quần Áo</a>
-                            </li>
-                            <li>
-                                <a href="#">Thương Hiệu</a>
-                            </li>
-                        </ul>
-                    </li> -->
                     <li>
                         <a ui-sref="staff"><i class="fa fa-fw fa-user"></i> Staff Information</a>
                     </li>
                     <li>
-                        <a ui-sref="announcements"><i class="fa fa-fw fa-bullhorn"></i> Announcements</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#announApp"><i class="fa fa-fw fa-bullhorn"></i> Announcements</a>
+                        <ul id="announApp" class="collapse">
+                            <li>
+                                <a href="#">Manage Events</a>
+                            </li>
+                            <li>
+                                <a href="#">Manage Articles</a>
+                            </li>
+                            <li>
+                                <a href="#">Manage News</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
